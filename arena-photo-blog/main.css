@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #dbdc9d;
+  --text: #90593b;
+  --link: #90593b;
+}
+
+::selection,
+::-moz-selection {
+  background: #ffffff;
+}
+
+html {
+  background:var(--bg);
+  font-family: monospace;
+  color:var(--text);
+}
+
+body {
+  margin:1rem;
+}
+
+img {
+  max-width:300px;
+  width: 100%;
+}
+
+a {
+  color: var(--link);
+}
+
+.entry {
+  margin-bottom:1rem;
+}
