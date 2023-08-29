@@ -52,25 +52,6 @@
       
 </pre>
       </div>
-      
-      <div id="split-2" class="col">
-        <div class="l-t">
-        The earliest recorded use of the word in English is from the 13th century and referred to the fruit. The first recorded use of "orange" as a colour name in English was in 1502, in a description of clothing purchased for Margaret Tudor. 
-        </div>
-        <div class="r-t">
-          Other sources cite the first recorded use as 1512, in a will now filed with the Public Record Office. It is generally thought that Old French calqued the Italian melarancio ("fruit of the orange tree", with mela "fruit") as pume orenge (with pume "fruit").Although pume orenge is attested earlier than melarancio in available written sources, lexicographers believe that the Italian word is actually older.
-        </div>
-
-        <div class="l-t">
-          The word ultimately derives from Proto-Dravidian or Tamil நாரம் (nāram). From there the word entered Sanskrit नारङ्ग (nāraṅga or nagrungo), meaning 'orange tree'. The Sanskrit word reached European languages through Persian نارنگ (nārang) and its Arabic derivative نارنج (nāranj).
-        </div>
-        <br>
-        <img src="7.jpg" style="display:block; margin: 0 auto;">
-        <br>
-        <div class="r-t">
-          The word entered Late Middle English in the 14th century via Old French orenge (in the phrase pomme d'orenge). The French word, in turn, comes from Old Provençal auranja, based on the Arabic word. In several languages, the initial n present in earlier forms of the word dropped off because it may have been mistaken as part of an indefinite article ending in an n sound. In French, for example, une norenge may have been heard as une orenge. This linguistic change is called juncture loss. The color was named after the fruit,[28] and the first recorded use of orange as a color name in English was in 1512.
-        </div>
-      </div>
 
     </div>
 
@@ -82,7 +63,14 @@
 
     <script type="module" src="split.js"></script>
 
-    <script type="module" src="scripts.js"></script>
+    <script type="module">
+      import Split from './split.js'
+
+      Split(['#split-0', '#split-1'], {
+        gutterSize: 3,
+        minSize: [300, 300],
+      })
+    </script>
 
   </body>
 </html>

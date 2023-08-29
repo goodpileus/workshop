@@ -7,6 +7,7 @@ html, body {
   height:100%;
   margin:0;
   color:rgb(77, 77, 86);
+  overflow: hidden;
 }
 
 img {
@@ -27,6 +28,8 @@ img {
   padding:1rem;
   overflow-y: auto;
   overflow-x: hidden;
+  scrollbar-color: #f7f7f7 transparent;
+  scrollbar-width: 2px;
 }
 
 .split {
@@ -38,7 +41,7 @@ img {
 }
 
 .gutter.gutter-horizontal {
-  border-left:1px solid;
+  /* border-left:1px solid; */
   cursor: col-resize;
 }
 
@@ -60,3 +63,24 @@ pre {
 .r-t {
   text-align: right;
 }
+
+
+ /* width */
+ ::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f7f7f7;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e0e0e0;
+} 
