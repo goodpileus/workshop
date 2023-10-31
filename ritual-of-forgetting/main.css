@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color: #ffffff;
+}
+
+::selection,
+::-moz-selection {
+  background: #ffffff;
+}
+
+html {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  margin:1rem;
+  background: #c7c8ad;
+}
+
+img {
+  max-width: 100%;
+}
