@@ -139,3 +139,18 @@ img {
   top:calc(50% - 10px);
   left:-20px;
 }
+
+@media screen and (max-width:600px) {
+  body {
+    font-size:90%;
+  }
+  
+  #earth {
+    transform:scale(.6);
+    margin:0;
+  }
+
+  #ritual {
+    text-align: center;
+  }
+}
