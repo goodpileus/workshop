@@ -19,6 +19,8 @@ body {
   margin:0;
   background: #c7c8ad;
   color: var(--color);
+  opacity:0;
+  transition: opacity .3s ease;
 }
 
 img {
@@ -27,7 +29,7 @@ img {
   max-height: 250px;
 }
 
-.atmosphere {
+.exosphere {
   display: flex;
   flex-direction: column;
   height:100vh;
@@ -35,6 +37,8 @@ img {
   justify-content: space-around;
   align-items: center;
   padding:1rem;
+  overflow: hidden;
+
 }
 
 #ritual {
@@ -54,46 +58,35 @@ img {
   /* background: red; */
 }
 
+.stratosphere {
+  transform: scale(.8);
+}
+
 #earth {
   position: relative;
   width:300px;
   height:300px;
-  border:1px solid;
+  border:1.2px solid;
   background-position: center;
   background-size: cover;
   margin:150px 0;
+  border-radius: 0px;
 }
 
 .zero {
-  /* transform:rotate(360deg); */
+  transform:rotate(360deg);
 }
 
-.ten {
-  /* transform:rotate(60deg); */
-  /* transform:rotate(180deg); */
-}
-
-.twenty {
-  /* transform:rotate(120deg); */
-  /* transform:rotate(360deg); */
+.fifteen {
+  transform:rotate(90deg);
 }
 
 .thirty {
-  /* transform:rotate(180deg); */
+  transform:rotate(180deg);
 }
 
-.forty {
-  /* transform:rotate(240deg); */
-  /* transform:rotate(360deg); */
-}
-
-.fifty {
-  /* transform:rotate(300deg); */
-  /* transform:rotate(180deg); */
-}
-
-.ground {
-  border:1px solid;
+.fortyfive {
+  transform:rotate(270deg);
 }
 
 .num {
@@ -121,10 +114,10 @@ img {
 }
 
 .belly {
-  width:300px;
+  width:299px;
   height:300px;
-  bottom:0;
-  left:0;
+  bottom:-1px;
+  left:-1px;
 }
 
 .feet {
@@ -144,9 +137,12 @@ img {
   body {
     font-size:90%;
   }
+
+  .stratosphere {
+    transform:scale(.6);
+  }
   
   #earth {
-    transform:scale(.6);
     margin:0;
   }
 

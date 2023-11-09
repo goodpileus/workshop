@@ -1,33 +1,15 @@
 let seconds = new Date().getSeconds();
 
-setInterval( function() {
-  seconds = new Date().getSeconds();
-  $("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
-  console.log(seconds);
-  
-  if (seconds == 0) {
-    zero();
-  } else if (seconds == 10) {
-    ten();
-  } else if (seconds == 20) {
-    twenty();
-  } else if (seconds == 30) {
-    thirty();
-  } else if (seconds == 40) {
-    forty();
-  } else if (seconds == 50) {
-    fifty();
-  }
-}, 1000);
-
 setTimeout(function() {
   init();
 }, 1000)
 
 function init() {
+  $("body").css('opacity', '1');
+
   if (seconds <= 10){
     $("#ritual").html('as i sit, in thrall');
-  } else if (seconds <= 20){
+  }  else if (seconds <= 20){
     $("#ritual").html('to the light of this screen<br> and my ritual of forgetting,');
   } else if (seconds <= 30){
     $("#ritual").html('comforted by the rhythm of my own echoes,<br> hollowed by their diminishing fidelity,');
@@ -38,12 +20,54 @@ function init() {
   } else if (seconds <= 60){
     $("#ritual").html('the flowers on my windowsill are turning to dust');
   }
+
+  if (seconds < 15){
+    $("#earth").addClass('zero');
+  } else if (seconds >= 15 && seconds < 30){
+    $("#earth").addClass('fifteen');
+  } else if (seconds >= 30 && seconds < 45){
+    $("#earth").addClass('thirty');
+  } else if (seconds >= 45 && seconds < 59){
+    $("#earth").addClass('fortyfive');
+  }
 }
+
+setInterval( function() {
+  seconds = new Date().getSeconds();
+  $("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
+  console.log(seconds);
+  
+  if (seconds == 0) {
+    zero();
+  } else if (seconds == 5) {
+    five();
+  } else if (seconds == 10) {
+    ten();
+  } else if (seconds == 15) {
+    fifteen();
+  } else if (seconds == 20) {
+    twenty();
+  } else if (seconds == 25) {
+    twentyFive();
+  } else if (seconds == 30) {
+    thirty();
+  } else if (seconds == 35) {
+    thirtyFive();
+  } else if (seconds == 40) {
+    forty();
+  } else if (seconds == 45) {
+    fortyFive();
+  } else if (seconds == 50) {
+    fifty();
+  } else if (seconds == 55) {
+    fiftyFive();
+  } 
+}, 1000);
 
 function zero() {
   console.log("zero!");
   $("#ritual").html('as i sit, in thrall');
-  $("#earth").removeClass('fifty');
+  $("#earth").removeClass('fortyfive');
   $("#earth").addClass('zero');
 
   playRandomMin();
@@ -54,11 +78,14 @@ function zero() {
   setBelly(belly);
 }
 
+function five() {
+  console.log("five!");
+  playRandomSec();
+}
+
 function ten() {
   console.log("ten!");
   $("#ritual").html('to the light of this screen<br> and my ritual of forgetting,');
-  $("#earth").removeClass('zero');
-  $("#earth").addClass('ten');
 
   playRandomSec();
 
@@ -66,13 +93,18 @@ function ten() {
   setHead(heads);
   setFeet(feet);
   setBelly(belly);
+}
+
+function fifteen() {
+  console.log("fifteen!");
+  playRandomSec();
+  $("#earth").removeClass('zero');
+  $("#earth").addClass('fifteen');
 }
 
 function twenty() {
   console.log("twenty!");
   $("#ritual").html('comforted by the rhythm of my own echoes,<br> hollowed by their diminishing fidelity,');
-  $("#earth").removeClass('ten');
-  $("#earth").addClass('twenty');
 
   playRandomSec();
 
@@ -82,10 +114,15 @@ function twenty() {
   setBelly(belly);
 }
 
+function twentyFive() {
+  console.log("twentyfive!");
+  playRandomSec();
+}
+
 function thirty() {
   console.log("thirty!");
   $("#ritual").html('when the other light, from the star overhead —<br> the one that gives me my earthly shadow —');
-  $("#earth").removeClass('twenty');
+  $("#earth").removeClass('fifteen');
   $("#earth").addClass('thirty');
 
   playRandomSec();
@@ -96,11 +133,14 @@ function thirty() {
   setBelly(belly);
 }
 
+function thirtyFive() {
+  console.log("thirtyfive!");
+  playRandomSec();
+}
+
 function forty() {
   console.log("forty!");
   $("#ritual").html('commands my attention with infernal energy<br> and i remember');
-  $("#earth").removeClass('thirty');
-  $("#earth").addClass('forty');
 
   playRandomSec();
 
@@ -110,11 +150,16 @@ function forty() {
   setBelly(belly);
 }
 
+function fortyFive() {
+  console.log("fortyfive!");
+  playRandomSec();
+  $("#earth").removeClass('thirty');
+  $("#earth").addClass('fortyfive');
+}
+
 function fifty() {
   console.log("fifty!");
   $("#ritual").html('the flowers on my windowsill are turning to dust');
-  $("#earth").removeClass('forty');
-  $("#earth").addClass('fifty');
 
   playRandomSec();
 
@@ -122,6 +167,11 @@ function fifty() {
   setHead(heads);
   setFeet(feet);
   setBelly(belly);
+}
+
+function fiftyFive() {
+  console.log("fiftyfive!");
+  playRandomSec();
 }
 
 
