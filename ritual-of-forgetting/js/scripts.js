@@ -223,6 +223,6 @@ function playRandomMin() {
   audioMin.play();
 }
 
-const loop = new Audio('../sound/loop1.wav');
+const loop = new Audio('sound/loop1.wav');
 loop.loop = true;
 // loop.play();
