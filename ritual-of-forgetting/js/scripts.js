@@ -5,8 +5,6 @@ setInterval( function() {
   $("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
   console.log(seconds);
   
-
-
   if (seconds == 0) {
     zero();
   } else if (seconds == 10) {
@@ -132,9 +130,9 @@ function fifty() {
 // ----------------
 
 var bgs = [
-  '../img/flower-1.gif',
-  '../img/frog-1.gif',
-  '../img/sun-3.gif'
+  'img/flower-1.gif',
+  'img/frog-1.gif',
+  'img/sun-3.gif'
 ];
 
 function setBackground(bgs) {
@@ -153,9 +151,9 @@ setBackground(bgs);
 // ----------
 
 var heads = [
-  '../img/head1.png',
-  '../img/head2.png',
-  '../img/head3.png'
+  'img/head1.png',
+  'img/head2.png',
+  'img/head3.png'
 ];
 
 function setHead(heads) {
@@ -170,8 +168,8 @@ setHead(heads);
 // ----------
 
 var feet = [
-  '../img/feet1.png',
-  '../img/feet2.png'
+  'img/feet1.png',
+  'img/feet2.png'
 ];
 
 function setFeet(feet) {
@@ -188,9 +186,9 @@ setFeet(feet);
 // ----------
 
 var belly = [
-  '../img/belly1.png',
-  '../img/belly2.png',
-  '../img/belly3.png'
+  'img/belly1.png',
+  'img/belly2.png',
+  'img/belly3.png'
 ];
 
 function setBelly(belly) {
@@ -206,7 +204,7 @@ setBelly(belly);
 // -----------
 
 const secArray = [
-  '../sound/s4.wav'
+  'sound/s4.wav'
 ];
 
 function playRandomSec() {
@@ -216,7 +214,7 @@ function playRandomSec() {
 }
 
 const minArray = [
-  '../sound/s5.wav'
+  'sound/s5.wav'
 ];
 
 function playRandomMin() {
