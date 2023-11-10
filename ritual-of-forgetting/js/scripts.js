@@ -193,7 +193,7 @@ function fiftyFive() {
 // -------------
 var rTwo = [
   'to the light of this screen<br> and my ritual of forgetting,',
-  "to the network's empty wisdom<br> and my ritual of forgetting,"
+  'to the network’s empty wisdom<br> and my ritual of forgetting,'
 ];
 
 function ritualTwo(rTwo) {
@@ -226,7 +226,7 @@ var rSix = [
   'the flowers on my windowsill are turning to dust',
   'the stone is more enchanting than the phone',
   'a shadow conforms to its surface',
-  "i've not been gentle with myself",
+  'i’ve not been gentle with myself',
   'bitterness swiftly takes the place of sincerity'
 ];
 
