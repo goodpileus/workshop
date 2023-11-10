@@ -10,15 +10,15 @@ function init() {
   if (seconds <= 10){
     $("#ritual").html('as i sit, in thrall');
   }  else if (seconds <= 20){
-    $("#ritual").html('to the light of this screen<br> and my ritual of forgetting,');
+    ritualTwo(rTwo);
   } else if (seconds <= 30){
-    $("#ritual").html('comforted by the rhythm of my own echoes,<br> hollowed by their diminishing fidelity,');
+    ritualThree(rThree);
   } else if (seconds <= 40){
-    $("#ritual").html('when the other light, from the star overhead —<br> the one that gives me my earthly shadow —');
+    ritualFour(rFour);
   } else if (seconds <= 50){
     $("#ritual").html('commands my attention with infernal energy<br> and i remember');
   } else if (seconds <= 60){
-    $("#ritual").html('the flowers on my windowsill are turning to dust');
+    ritualSix(rSix);
   }
 
   if (seconds < 15){
@@ -64,30 +64,34 @@ setInterval( function() {
   } 
 }, 1000);
 
+// 0 sec
 function zero() {
   console.log("zero!");
-  $("#ritual").html('as i sit, in thrall');
+  playRandomMin();
+
   $("#earth").removeClass('fortyfive');
   $("#earth").addClass('zero');
 
-  playRandomMin();
-
+  $("#ritual").html('as i sit, in thrall');
+  
   setBackground(bgs);
   setHead(heads);
   setFeet(feet);
   setBelly(belly);
 }
 
+// 5 sec
 function five() {
   console.log("five!");
   playRandomSec();
 }
 
+// 10 sec
 function ten() {
   console.log("ten!");
-  $("#ritual").html('to the light of this screen<br> and my ritual of forgetting,');
-
   playRandomSec();
+
+  ritualTwo(rTwo);
 
   setBackground(bgs);
   setHead(heads);
@@ -95,6 +99,7 @@ function ten() {
   setBelly(belly);
 }
 
+// 15 sec
 function fifteen() {
   console.log("fifteen!");
   playRandomSec();
@@ -102,11 +107,12 @@ function fifteen() {
   $("#earth").addClass('fifteen');
 }
 
+// 20 sec
 function twenty() {
   console.log("twenty!");
-  $("#ritual").html('comforted by the rhythm of my own echoes,<br> hollowed by their diminishing fidelity,');
-
   playRandomSec();
+
+  ritualThree(rThree);
 
   setBackground(bgs);
   setHead(heads);
@@ -114,18 +120,21 @@ function twenty() {
   setBelly(belly);
 }
 
+// 25 sec
 function twentyFive() {
   console.log("twentyfive!");
   playRandomSec();
 }
 
+// 30 sec
 function thirty() {
   console.log("thirty!");
-  $("#ritual").html('when the other light, from the star overhead —<br> the one that gives me my earthly shadow —');
+  playRandomSec();
+
   $("#earth").removeClass('fifteen');
   $("#earth").addClass('thirty');
 
-  playRandomSec();
+  ritualFour(rFour);
 
   setBackground(bgs);
   setHead(heads);
@@ -133,11 +142,13 @@ function thirty() {
   setBelly(belly);
 }
 
+// 35 sec
 function thirtyFive() {
   console.log("thirtyfive!");
   playRandomSec();
 }
 
+// 40 sec
 function forty() {
   console.log("forty!");
   $("#ritual").html('commands my attention with infernal energy<br> and i remember');
@@ -150,6 +161,7 @@ function forty() {
   setBelly(belly);
 }
 
+// 45 sec
 function fortyFive() {
   console.log("fortyfive!");
   playRandomSec();
@@ -157,11 +169,12 @@ function fortyFive() {
   $("#earth").addClass('fortyfive');
 }
 
+// 50 sec
 function fifty() {
   console.log("fifty!");
-  $("#ritual").html('the flowers on my windowsill are turning to dust');
-
   playRandomSec();
+
+  ritualSix(rSix);
 
   setBackground(bgs);
   setHead(heads);
@@ -169,11 +182,58 @@ function fifty() {
   setBelly(belly);
 }
 
+// 55 sec
 function fiftyFive() {
   console.log("fiftyfive!");
   playRandomSec();
 }
 
+// -------------
+// =  RITUALS  =
+// -------------
+var rTwo = [
+  'to the light of this screen<br> and my ritual of forgetting,',
+  "to the network's empty wisdom<br> and my ritual of forgetting,"
+];
+
+function ritualTwo(rTwo) {
+  var index = Math.floor(Math.random() * (rTwo.length));
+  $('#ritual').html(rTwo[index]);
+}
+
+
+var rThree = [
+  'comforted by the rhythm of my own echoes,<br> hollowed by their diminishing fidelity,',
+  'electrified by the whims of strangers,<br> extinguished by so much accumulated spite,'
+];
+
+function ritualThree(rThree) {
+  var index = Math.floor(Math.random() * (rThree.length));
+  $('#ritual').html(rThree[index]);
+}
+
+var rFour = [
+  'when the light from the star overhead —<br> the light that gives me my earthly shadow —',
+  'when the light from the star overhead —<br> the light that became my only friend —'
+];
+
+function ritualFour(rFour) {
+  var index = Math.floor(Math.random() * (rFour.length));
+  $('#ritual').html(rFour[index]);
+}
+
+var rSix = [
+  'the flowers on my windowsill are turning to dust',
+  'the stone is more enchanting than the phone',
+  'a shadow conforms to its surface',
+  "i've not been gentle with myself",
+  'bitterness swiftly takes the place of sincerity'
+];
+
+function ritualSix(rSix) {
+  var index = Math.floor(Math.random() * (rSix.length));
+  $('#ritual').html(rSix[index]);
+}
 
 // ----------------
 // =  BACKGROUND  =
@@ -187,10 +247,7 @@ var bgs = [
 
 function setBackground(bgs) {
   var index = Math.floor(Math.random() * (bgs.length));
-  // var target = document.getElementById("earth");
-  // target.style.backgroundImage = "url(" + bgs[index] + ")";
   $('#earth').css('background-image','url(' + bgs[index] + ')');
-
 }
 
 setBackground(bgs);

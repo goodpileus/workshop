@@ -11,8 +11,22 @@
   background: #ffffff;
 }
 
+@font-face {
+  font-family: 'tt2020';
+  src: url(font/tt2020b-r.woff2);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'tt2020';
+  src: url(font/tt2020b-i.woff2);
+  font-style: italic;
+}
+
 html {
-  font-family: 'Courier New', Courier, monospace;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: 'tt2020';
+
 }
 
 body {
@@ -47,7 +61,7 @@ img {
   justify-content: flex-start;
   height:50px;
   /* background: red; */
-
+  text-align: center;
 }
 
 #sec {
@@ -69,7 +83,7 @@ img {
   border:1.2px solid;
   background-position: center;
   background-size: cover;
-  margin:150px 0;
+  margin:50px 0;
   border-radius: 0px;
 }
 
