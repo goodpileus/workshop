@@ -78,12 +78,17 @@ function zero() {
   setHead(heads);
   setFeet(feet);
   setBelly(belly);
+  setCore(core);
+  setRight(right);
+  setLeft(left);
 }
 
 // 5 sec
 function five() {
   console.log("five!");
   playRandomSec();
+
+  setSky(skies);
 }
 
 // 10 sec
@@ -97,6 +102,9 @@ function ten() {
   setHead(heads);
   setFeet(feet);
   setBelly(belly);
+  setCore(core);
+  setRight(right);
+  setLeft(left);
 }
 
 // 15 sec
@@ -105,6 +113,8 @@ function fifteen() {
   playRandomSec();
   $("#earth").removeClass('zero');
   $("#earth").addClass('fifteen');
+  
+  setSky(skies);
 }
 
 // 20 sec
@@ -118,12 +128,17 @@ function twenty() {
   setHead(heads);
   setFeet(feet);
   setBelly(belly);
+  setRight(right);
+  setLeft(left);
+  setCore(core);
 }
 
 // 25 sec
 function twentyFive() {
   console.log("twentyfive!");
   playRandomSec();
+  
+  setSky(skies);
 }
 
 // 30 sec
@@ -140,18 +155,23 @@ function thirty() {
   setHead(heads);
   setFeet(feet);
   setBelly(belly);
+  setCore(core);
+  setRight(right);
+  setLeft(left);
 }
 
 // 35 sec
 function thirtyFive() {
   console.log("thirtyfive!");
   playRandomSec();
+  
+  setSky(skies);
 }
 
 // 40 sec
 function forty() {
   console.log("forty!");
-  $("#ritual").html('commands my attention with infernal energy<br> and i remember');
+  $("#ritual").html('when suddenly, i remember:');
 
   playRandomSec();
 
@@ -159,6 +179,9 @@ function forty() {
   setHead(heads);
   setFeet(feet);
   setBelly(belly);
+  setCore(core);
+  setRight(right);
+  setLeft(left);
 }
 
 // 45 sec
@@ -167,6 +190,8 @@ function fortyFive() {
   playRandomSec();
   $("#earth").removeClass('thirty');
   $("#earth").addClass('fortyfive');
+  
+  setSky(skies);
 }
 
 // 50 sec
@@ -180,20 +205,25 @@ function fifty() {
   setHead(heads);
   setFeet(feet);
   setBelly(belly);
+  setCore(core);
+  setRight(right);
+  setLeft(left);
 }
 
 // 55 sec
 function fiftyFive() {
   console.log("fiftyfive!");
   playRandomSec();
+  
+  setSky(skies);
 }
 
 // -------------
 // =  RITUALS  =
 // -------------
 var rTwo = [
-  'to the light of this screen<br> and my ritual of forgetting,',
-  'to the network’s empty wisdom<br> and my ritual of forgetting,'
+  'to the light of this screen',
+  'to the network’s empty wisdom',
 ];
 
 function ritualTwo(rTwo) {
@@ -203,8 +233,7 @@ function ritualTwo(rTwo) {
 
 
 var rThree = [
-  'comforted by the rhythm of my own echoes,<br> hollowed by their diminishing fidelity,',
-  'electrified by the whims of strangers,<br> extinguished by so much accumulated spite,'
+  'and my ritual of forgetting,'
 ];
 
 function ritualThree(rThree) {
@@ -213,8 +242,12 @@ function ritualThree(rThree) {
 }
 
 var rFour = [
-  'when the light from the star overhead —<br> the light that gives me my earthly shadow —',
-  'when the light from the star overhead —<br> the light that became my only friend —'
+  'comforted by the rhythm of my own echoes,',
+  'hollowed by the diminishing fidelity of the stars,',
+  'electrified by the unhindered whims of strangers,',
+  'extinguished by so much accumulated spite,',
+  'warmed by the friendship of the sun,',
+  'dizzied by my unhappy routine,',
 ];
 
 function ritualFour(rFour) {
@@ -227,7 +260,19 @@ var rSix = [
   'the stone is more enchanting than the phone',
   'a shadow conforms to its surface',
   'i’ve not been gentle with myself',
-  'bitterness swiftly takes the place of sincerity'
+  'i’ve forgotten to be gentle with others',
+  'bitterness swiftly takes the place of sincerity',
+  'i should not mistake love for loneliness',
+  'we have made it convenient to decay in solitude',
+  'stories are shadows cast from the light of our stars',
+  'this place once felt vital',
+  'i do not want to conjure illusions',
+  'practice requires remembering',
+  'remembering requires ritual',
+  'ritual requires practice',
+  'the clouds are changing in a way i can’t perceive',
+  'dizziness is not always a dark thing',
+  'the river will come eventually',
 ];
 
 function ritualSix(rSix) {
@@ -235,14 +280,54 @@ function ritualSix(rSix) {
   $('#ritual').html(rSix[index]);
 }
 
+// ---------
+// =  SKY  =
+// ---------
+
+var skies = [
+  'img/stars1.gif',
+  'img/stars2.gif',
+  'img/stars3.gif',
+  'img/stars4.gif',
+];
+
+function setSky(skies) {
+  var index = Math.floor(Math.random() * (skies.length));
+  $('.thermosphere').css('background-image','url(' + skies[index] + ')');
+}
+
+setSky(skies);
+
+
 // ----------------
 // =  BACKGROUND  =
 // ----------------
 
 var bgs = [
-  'img/flower-1.gif',
-  'img/frog-1.gif',
-  'img/sun-3.gif'
+  'img/bg3.gif',
+  'img/bg4.gif',
+  'img/bg7.gif',
+  'img/bg8.gif',
+  'img/bg11.gif',
+  'img/bg12.gif',
+  'img/bg13.gif',
+  'img/bg14.gif',
+  'img/bg15.gif',
+  'img/bg16.gif',
+  'img/bg17.gif',
+  'img/bg18.gif',
+  'img/bg21.gif',
+  'img/bg22.gif',
+  'img/bg22b.gif',
+  'img/bg22c.gif',
+  'img/bg25.gif',
+  'img/bg26.gif',
+  'img/bg27.gif',
+  'img/bg28.gif',
+  'img/bg29.gif',
+  'img/bg30.gif',
+  'img/bg31.gif',
+  'img/bg33.gif',
 ];
 
 function setBackground(bgs) {
@@ -258,9 +343,11 @@ setBackground(bgs);
 // ----------
 
 var heads = [
-  'img/head1.png',
-  'img/head2.png',
-  'img/head3.png'
+  'img/blank.gif',
+  'img/head1.gif',
+  'img/head4.gif',
+  'img/head5.gif',
+  'img/head6.gif',
 ];
 
 function setHead(heads) {
@@ -275,8 +362,10 @@ setHead(heads);
 // ----------
 
 var feet = [
-  'img/feet1.png',
-  'img/feet2.png'
+  'img/blank.gif',
+  'img/feet1.gif',
+  'img/feet2.gif',
+  'img/feet3.gif',
 ];
 
 function setFeet(feet) {
@@ -287,15 +376,15 @@ function setFeet(feet) {
 setFeet(feet);
 
 
-
-// ----------
+// -----------
 // =  BELLY  =
-// ----------
+// -----------
 
 var belly = [
-  'img/belly1.png',
-  'img/belly2.png',
-  'img/belly3.png'
+  'img/blank.gif',
+  'img/belly1.gif',
+  'img/belly2.gif',
+  'img/belly3.gif'
 ];
 
 function setBelly(belly) {
@@ -304,6 +393,60 @@ function setBelly(belly) {
 }
 
 setBelly(belly);
+
+// ----------
+// =  CORE  =
+// ----------
+
+var core = [
+  'img/blank.gif',
+  // 'img/core1.gif',
+];
+
+function setCore(core) {
+  var index = Math.floor(Math.random() * (core.length));
+  $('.core').css('background-image','url(' + core[index] + ')');
+}
+
+setCore(core);
+
+
+// -----------
+// =  RIGHT  =
+// -----------
+
+var right = [
+  'img/blank.gif',
+  'img/right1.gif',
+  'img/right2.gif',
+  'img/right3.gif',
+];
+
+function setRight(right) {
+  var index = Math.floor(Math.random() * (right.length));
+  $('.r-hand').css('background-image','url(' + right[index] + ')');
+}
+
+setRight(right);
+
+
+// ----------
+// =  LEFT  =
+// ----------
+
+var left = [
+  'img/blank.gif',
+  'img/left1.gif',
+  'img/left2.gif',
+  'img/left3.gif',
+];
+
+function setLeft(left) {
+  var index = Math.floor(Math.random() * (left.length));
+  $('.l-hand').css('background-image','url(' + left[index] + ')');
+}
+
+setLeft(left);
 
 
 // -----------
