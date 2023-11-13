@@ -7,6 +7,8 @@ setTimeout(function() {
 function init() {
   $("body").css('opacity', '1');
 
+  ritualSplit(rSplits);
+
   if (seconds <= 10){
     $("#ritual").html('as i sit, in thrall');
   }  else if (seconds <= 20){
@@ -34,7 +36,7 @@ function init() {
 
 setInterval( function() {
   seconds = new Date().getSeconds();
-  $("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
+  // $("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
   console.log(seconds);
   
   if (seconds == 0) {
@@ -88,6 +90,8 @@ function five() {
   console.log("five!");
   playRandomSec();
 
+  ritualSplit(rSplits);
+
   setSky(skies);
 }
 
@@ -113,6 +117,8 @@ function fifteen() {
   playRandomSec();
   $("#earth").removeClass('zero');
   $("#earth").addClass('fifteen');
+
+  ritualSplit(rSplits);
   
   setSky(skies);
 }
@@ -137,6 +143,8 @@ function twenty() {
 function twentyFive() {
   console.log("twentyfive!");
   playRandomSec();
+
+  ritualSplit(rSplits);
   
   setSky(skies);
 }
@@ -164,6 +172,8 @@ function thirty() {
 function thirtyFive() {
   console.log("thirtyfive!");
   playRandomSec();
+
+  ritualSplit(rSplits);
   
   setSky(skies);
 }
@@ -190,6 +200,8 @@ function fortyFive() {
   playRandomSec();
   $("#earth").removeClass('thirty');
   $("#earth").addClass('fortyfive');
+
+  ritualSplit(rSplits);
   
   setSky(skies);
 }
@@ -214,6 +226,8 @@ function fifty() {
 function fiftyFive() {
   console.log("fiftyfive!");
   playRandomSec();
+
+  ritualSplit(rSplits);
   
   setSky(skies);
 }
@@ -224,6 +238,11 @@ function fiftyFive() {
 var rTwo = [
   'to the light of this screen',
   'to the network’s empty wisdom',
+  'to the dogma of progress,',
+  'to the promised nourishment of the feed',
+  'to the silence in the wires',
+  'to the barbed shell of irony',
+  'to the graceless convenience of all my tools',
 ];
 
 function ritualTwo(rTwo) {
@@ -246,8 +265,11 @@ var rFour = [
   'hollowed by the diminishing fidelity of the stars,',
   'electrified by the unhindered whims of strangers,',
   'extinguished by so much accumulated spite,',
-  'warmed by the friendship of the sun,',
-  'dizzied by my unhappy routine,',
+  'warm from the friendship of the sun,',
+  'dizzy from the unhappy routine,',
+  'famished after eating so many stories,',
+  'spirit refined into fuel,',
+  'heart abstracted into a node,',
 ];
 
 function ritualFour(rFour) {
@@ -273,11 +295,42 @@ var rSix = [
   'the clouds are changing in a way i can’t perceive',
   'dizziness is not always a dark thing',
   'the river will come eventually',
+  'sleep is the answer',
 ];
 
 function ritualSix(rSix) {
   var index = Math.floor(Math.random() * (rSix.length));
   $('#ritual').html(rSix[index]);
+}
+
+var rSplits = [
+  'dizzy dizzy dizzy',
+  'sun-drunk',
+  'september everlasting',
+  'unplugged and abandoned',
+  'fever of awareness',
+  'stolen daydream',
+  'rotten software',
+  'poisoned well',
+  'golden hour',
+  'middling',
+  'time wrangling',
+  'content fasting',
+  'not now',
+  'never enough',
+  'arrive alive',
+  'mud body',
+  'urgent rest',
+  'cooldown',
+  'bottled wasp',
+  'burnout by design',
+  'boiled mind',
+  'souvenir to remember the end',
+];
+
+function ritualSplit(rSplits) {
+  var index = Math.floor(Math.random() * (rSplits.length));
+  $('#sec').html(rSplits[index]);
 }
 
 // ---------
@@ -348,6 +401,8 @@ var heads = [
   'img/head4.gif',
   'img/head5.gif',
   'img/head6.gif',
+  'img/head7.gif',
+  'img/head8.gif',
 ];
 
 function setHead(heads) {
@@ -366,6 +421,9 @@ var feet = [
   'img/feet1.gif',
   'img/feet2.gif',
   'img/feet3.gif',
+  'img/feet4.gif',
+  'img/feet5.gif',
+  'img/feet6.gif',
 ];
 
 function setFeet(feet) {
@@ -384,7 +442,9 @@ var belly = [
   'img/blank.gif',
   'img/belly1.gif',
   'img/belly2.gif',
-  'img/belly3.gif'
+  'img/belly3.gif',
+  'img/belly4.gif',
+  'img/belly6.gif',
 ];
 
 function setBelly(belly) {
@@ -401,6 +461,7 @@ setBelly(belly);
 var core = [
   'img/blank.gif',
   // 'img/core1.gif',
+  // 'img/core2.gif',
 ];
 
 function setCore(core) {
@@ -420,6 +481,9 @@ var right = [
   'img/right1.gif',
   'img/right2.gif',
   'img/right3.gif',
+  'img/right4.gif',
+  'img/right5.gif',
+  'img/right6.gif',
 ];
 
 function setRight(right) {
@@ -439,6 +503,9 @@ var left = [
   'img/left1.gif',
   'img/left2.gif',
   'img/left3.gif',
+  'img/left4.gif',
+  'img/left5.gif',
+  'img/left6.gif',
 ];
 
 function setLeft(left) {
