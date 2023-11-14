@@ -38,6 +38,8 @@ setInterval( function() {
   seconds = new Date().getSeconds();
   // $("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
   console.log(seconds);
+
+  
   
   if (seconds == 0) {
     zero();
@@ -63,7 +65,10 @@ setInterval( function() {
     fifty();
   } else if (seconds == 55) {
     fiftyFive();
-  } 
+  } else {
+    const sec = new Audio('sound/second.wav');
+    sec.play();
+  }
 }, 1000);
 
 // 0 sec
@@ -75,14 +80,15 @@ function zero() {
   $("#earth").addClass('zero');
 
   $("#ritual").html('as i sit, in thrall');
-  
-  setBackground(bgs);
+
   setHead(heads);
-  setFeet(feet);
-  setBelly(belly);
-  setCore(core);
-  setRight(right);
-  setLeft(left);
+  // setRight(right);
+  // setFeet(feet);
+  // setLeft(left);
+  // setBelly(belly);
+  // setCore(core);
+
+  // setBackground(bgs);
 }
 
 // 5 sec
@@ -91,6 +97,15 @@ function five() {
   playRandomSec();
 
   ritualSplit(rSplits);
+
+  // setHead(heads);
+  setRight(right);
+  // setFeet(feet);
+  // setLeft(left);
+  // setBelly(belly);
+  // setCore(core);
+
+  // setBackground(bgs);
 
   setSky(skies);
 }
@@ -102,13 +117,14 @@ function ten() {
 
   ritualTwo(rTwo);
 
-  setBackground(bgs);
-  setHead(heads);
+  // setHead(heads);
+  // setRight(right);
   setFeet(feet);
-  setBelly(belly);
-  setCore(core);
-  setRight(right);
-  setLeft(left);
+  // setLeft(left);
+  // setBelly(belly);
+  // setCore(core);
+
+  // setBackground(bgs);
 }
 
 // 15 sec
@@ -119,6 +135,15 @@ function fifteen() {
   $("#earth").addClass('fifteen');
 
   ritualSplit(rSplits);
+
+  // setHead(heads);
+  // setRight(right);
+  // setFeet(feet);
+  setLeft(left);
+  // setBelly(belly);
+  // setCore(core);
+
+  // setBackground(bgs);
   
   setSky(skies);
 }
@@ -130,13 +155,14 @@ function twenty() {
 
   ritualThree(rThree);
 
-  setBackground(bgs);
-  setHead(heads);
-  setFeet(feet);
+  // setHead(heads);
+  // setRight(right);
+  // setFeet(feet);
+  // setLeft(left);
   setBelly(belly);
-  setRight(right);
-  setLeft(left);
-  setCore(core);
+  // setCore(core);
+
+  // setBackground(bgs);
 }
 
 // 25 sec
@@ -147,6 +173,8 @@ function twentyFive() {
   ritualSplit(rSplits);
   
   setSky(skies);
+
+  setBackground(bgs);
 }
 
 // 30 sec
@@ -159,13 +187,14 @@ function thirty() {
 
   ritualFour(rFour);
 
-  setBackground(bgs);
   setHead(heads);
-  setFeet(feet);
-  setBelly(belly);
-  setCore(core);
-  setRight(right);
-  setLeft(left);
+  // setRight(right);
+  // setFeet(feet);
+  // setLeft(left);
+  // setBelly(belly);
+  // setCore(core);
+
+  // setBackground(bgs);
 }
 
 // 35 sec
@@ -174,6 +203,15 @@ function thirtyFive() {
   playRandomSec();
 
   ritualSplit(rSplits);
+
+  // setHead(heads);
+  setRight(right);
+  // setFeet(feet);
+  // setLeft(left);
+  // setBelly(belly);
+  // setCore(core);
+
+  // setBackground(bgs);
   
   setSky(skies);
 }
@@ -185,13 +223,14 @@ function forty() {
 
   playRandomSec();
 
-  setBackground(bgs);
-  setHead(heads);
+  // setHead(heads);
+  // setRight(right);
   setFeet(feet);
-  setBelly(belly);
-  setCore(core);
-  setRight(right);
-  setLeft(left);
+  // setLeft(left);
+  // setBelly(belly);
+  // setCore(core);
+
+  // setBackground(bgs);
 }
 
 // 45 sec
@@ -202,6 +241,15 @@ function fortyFive() {
   $("#earth").addClass('fortyfive');
 
   ritualSplit(rSplits);
+
+  // setHead(heads);
+  // setRight(right);
+  // setFeet(feet);
+  setLeft(left);
+  // setBelly(belly);
+  // setCore(core);
+
+  // setBackground(bgs);
   
   setSky(skies);
 }
@@ -213,13 +261,14 @@ function fifty() {
 
   ritualSix(rSix);
 
-  setBackground(bgs);
-  setHead(heads);
-  setFeet(feet);
+  // setHead(heads);
+  // setRight(right);
+  // setFeet(feet);
+  // setLeft(left);
   setBelly(belly);
-  setCore(core);
-  setRight(right);
-  setLeft(left);
+  // setCore(core);
+
+  // setBackground(bgs);
 }
 
 // 55 sec
@@ -228,6 +277,15 @@ function fiftyFive() {
   playRandomSec();
 
   ritualSplit(rSplits);
+
+  // setHead(heads);
+  // setRight(right);
+  // setFeet(feet);
+  // setLeft(left);
+  // setBelly(belly);
+  // setCore(core);
+
+  setBackground(bgs);
   
   setSky(skies);
 }
@@ -263,13 +321,14 @@ function ritualThree(rThree) {
 var rFour = [
   'comforted by the rhythm of my own echoes,',
   'hollowed by the diminishing fidelity of the stars,',
-  'electrified by the unhindered whims of strangers,',
+  'electrified by the whims of strangers,',
   'extinguished by so much accumulated spite,',
   'warm from the friendship of the sun,',
   'dizzy from the unhappy routine,',
   'famished after eating so many stories,',
   'spirit refined into fuel,',
-  'heart abstracted into a node,',
+  'heart abstracted into node,',
+  'mind blunted into logic gate,',
 ];
 
 function ritualFour(rFour) {
@@ -280,13 +339,12 @@ function ritualFour(rFour) {
 var rSix = [
   'the flowers on my windowsill are turning to dust',
   'the stone is more enchanting than the phone',
-  'a shadow conforms to its surface',
+  'my shadow is conforming to its surface',
   'i’ve not been gentle with myself',
   'i’ve forgotten to be gentle with others',
   'bitterness swiftly takes the place of sincerity',
   'i should not mistake love for loneliness',
   'we have made it convenient to decay in solitude',
-  'stories are shadows cast from the light of our stars',
   'this place once felt vital',
   'i do not want to conjure illusions',
   'practice requires remembering',
@@ -320,12 +378,12 @@ var rSplits = [
   'never enough',
   'arrive alive',
   'mud body',
+  'glass mind',
   'urgent rest',
   'cooldown',
   'bottled wasp',
   'burnout by design',
   'boiled mind',
-  'souvenir to remember the end',
 ];
 
 function ritualSplit(rSplits) {
@@ -521,25 +579,36 @@ setLeft(left);
 // -----------
 
 const secArray = [
-  'sound/s4.wav'
+  'sound/t1.wav',
+  'sound/t2.wav',
+  'sound/t3.wav',
+  'sound/t4.wav',
+  'sound/t5.wav',
+  'sound/t6.wav',
+  'sound/t7.wav',
+  'sound/t8.wav',
+  'sound/t9.wav',
+  'sound/t10.wav',
 ];
 
 function playRandomSec() {
   const secIndex = Math.floor(Math.random() * secArray.length);
   const audioSec = new Audio(secArray[secIndex]);
+  audioSec.volume = 0.5;
   audioSec.play();
 }
 
 const minArray = [
-  'sound/s5.wav'
+  'sound/minute2.wav',
+  'sound/minute3.wav',
+  'sound/minute4.wav',
+  'sound/minute5.wav',
+  'sound/minute6.wav',
 ];
 
 function playRandomMin() {
   const minIndex = Math.floor(Math.random() * minArray.length);
   const audioMin = new Audio(minArray[minIndex]);
+  audioMin.volume = 0.5;
   audioMin.play();
 }
-
-const loop = new Audio('sound/loop1.wav');
-loop.loop = true;
-// loop.play();
