@@ -328,7 +328,7 @@ var rFour = [
   'famished after eating so many stories,',
   'spirit refined into fuel,',
   'heart abstracted into node,',
-  'mind blunted into logic gate,',
+  'mind reduced to logic gate,',
 ];
 
 function ritualFour(rFour) {
