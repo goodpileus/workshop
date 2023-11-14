@@ -39,8 +39,6 @@ setInterval( function() {
   // $("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
   console.log(seconds);
 
-  
-  
   if (seconds == 0) {
     zero();
   } else if (seconds == 5) {
