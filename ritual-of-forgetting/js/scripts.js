@@ -18,7 +18,7 @@ function init() {
   } else if (seconds <= 40){
     ritualFour(rFour);
   } else if (seconds <= 50){
-    $("#ritual").html('commands my attention with infernal energy<br> and i remember');
+    $("#ritual").html('when suddenly, i remember:');
   } else if (seconds <= 60){
     ritualSix(rSix);
   }
