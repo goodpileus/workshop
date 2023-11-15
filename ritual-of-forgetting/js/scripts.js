@@ -80,13 +80,6 @@ function zero() {
   $("#ritual").html('as i sit, in thrall');
 
   setHead(heads);
-  // setRight(right);
-  // setFeet(feet);
-  // setLeft(left);
-  // setBelly(belly);
-  // setCore(core);
-
-  // setBackground(bgs);
 }
 
 // 5 sec
@@ -96,14 +89,7 @@ function five() {
 
   ritualSplit(rSplits);
 
-  // setHead(heads);
   setRight(right);
-  // setFeet(feet);
-  // setLeft(left);
-  // setBelly(belly);
-  // setCore(core);
-
-  // setBackground(bgs);
 
   setSky(skies);
 }
@@ -115,14 +101,7 @@ function ten() {
 
   ritualTwo(rTwo);
 
-  // setHead(heads);
-  // setRight(right);
   setFeet(feet);
-  // setLeft(left);
-  // setBelly(belly);
-  // setCore(core);
-
-  // setBackground(bgs);
 }
 
 // 15 sec
@@ -134,14 +113,7 @@ function fifteen() {
 
   ritualSplit(rSplits);
 
-  // setHead(heads);
-  // setRight(right);
-  // setFeet(feet);
   setLeft(left);
-  // setBelly(belly);
-  // setCore(core);
-
-  // setBackground(bgs);
   
   setSky(skies);
 }
@@ -153,14 +125,7 @@ function twenty() {
 
   ritualThree(rThree);
 
-  // setHead(heads);
-  // setRight(right);
-  // setFeet(feet);
-  // setLeft(left);
   setBelly(belly);
-  // setCore(core);
-
-  // setBackground(bgs);
 }
 
 // 25 sec
@@ -186,13 +151,6 @@ function thirty() {
   ritualFour(rFour);
 
   setHead(heads);
-  // setRight(right);
-  // setFeet(feet);
-  // setLeft(left);
-  // setBelly(belly);
-  // setCore(core);
-
-  // setBackground(bgs);
 }
 
 // 35 sec
@@ -202,14 +160,7 @@ function thirtyFive() {
 
   ritualSplit(rSplits);
 
-  // setHead(heads);
   setRight(right);
-  // setFeet(feet);
-  // setLeft(left);
-  // setBelly(belly);
-  // setCore(core);
-
-  // setBackground(bgs);
   
   setSky(skies);
 }
@@ -221,14 +172,7 @@ function forty() {
 
   playRandomSec();
 
-  // setHead(heads);
-  // setRight(right);
   setFeet(feet);
-  // setLeft(left);
-  // setBelly(belly);
-  // setCore(core);
-
-  // setBackground(bgs);
 }
 
 // 45 sec
@@ -240,14 +184,7 @@ function fortyFive() {
 
   ritualSplit(rSplits);
 
-  // setHead(heads);
-  // setRight(right);
-  // setFeet(feet);
   setLeft(left);
-  // setBelly(belly);
-  // setCore(core);
-
-  // setBackground(bgs);
   
   setSky(skies);
 }
@@ -259,14 +196,7 @@ function fifty() {
 
   ritualSix(rSix);
 
-  // setHead(heads);
-  // setRight(right);
-  // setFeet(feet);
-  // setLeft(left);
   setBelly(belly);
-  // setCore(core);
-
-  // setBackground(bgs);
 }
 
 // 55 sec
@@ -275,13 +205,6 @@ function fiftyFive() {
   playRandomSec();
 
   ritualSplit(rSplits);
-
-  // setHead(heads);
-  // setRight(right);
-  // setFeet(feet);
-  // setLeft(left);
-  // setBelly(belly);
-  // setCore(core);
 
   setBackground(bgs);
   
@@ -299,13 +222,13 @@ var rTwo = [
   'to the silence in the wires',
   'to the barbed shell of irony',
   'to the graceless convenience of all my tools',
+  'to the sap of determinism'
 ];
 
 function ritualTwo(rTwo) {
   var index = Math.floor(Math.random() * (rTwo.length));
   $('#ritual').html(rTwo[index]);
 }
-
 
 var rThree = [
   'and my ritual of forgetting,'
@@ -326,7 +249,7 @@ var rFour = [
   'famished after eating so many stories,',
   'spirit refined into fuel,',
   'heart abstracted into node,',
-  'mind reduced to logic gate,',
+  'mind reduced to logic gate,'
 ];
 
 function ritualFour(rFour) {
@@ -352,6 +275,8 @@ var rSix = [
   'dizziness is not always a dark thing',
   'the river will come eventually',
   'sleep is the answer',
+  'demons dislike exposure',
+  'the gap in the fence has widened just a bit'
 ];
 
 function ritualSix(rSix) {
@@ -382,6 +307,8 @@ var rSplits = [
   'bottled wasp',
   'burnout by design',
   'boiled mind',
+  'low bit',
+  'nothing to give'
 ];
 
 function ritualSplit(rSplits) {
@@ -397,7 +324,7 @@ var skies = [
   'img/stars1.gif',
   'img/stars2.gif',
   'img/stars3.gif',
-  'img/stars4.gif',
+  'img/stars4.gif'
 ];
 
 function setSky(skies) {
@@ -436,7 +363,7 @@ var bgs = [
   'img/bg29.gif',
   'img/bg30.gif',
   'img/bg31.gif',
-  'img/bg33.gif',
+  'img/bg33.gif'
 ];
 
 function setBackground(bgs) {
@@ -458,7 +385,7 @@ var heads = [
   'img/head5.gif',
   'img/head6.gif',
   'img/head7.gif',
-  'img/head8.gif',
+  'img/head8.gif'
 ];
 
 function setHead(heads) {
@@ -479,7 +406,7 @@ var feet = [
   'img/feet3.gif',
   'img/feet4.gif',
   'img/feet5.gif',
-  'img/feet6.gif',
+  'img/feet6.gif'
 ];
 
 function setFeet(feet) {
@@ -500,7 +427,7 @@ var belly = [
   'img/belly2.gif',
   'img/belly3.gif',
   'img/belly4.gif',
-  'img/belly6.gif',
+  'img/belly6.gif'
 ];
 
 function setBelly(belly) {
@@ -515,9 +442,7 @@ setBelly(belly);
 // ----------
 
 var core = [
-  'img/blank.gif',
-  // 'img/core1.gif',
-  // 'img/core2.gif',
+  'img/blank.gif'
 ];
 
 function setCore(core) {
@@ -539,7 +464,7 @@ var right = [
   'img/right3.gif',
   'img/right4.gif',
   'img/right5.gif',
-  'img/right6.gif',
+  'img/right6.gif'
 ];
 
 function setRight(right) {
@@ -561,7 +486,7 @@ var left = [
   'img/left3.gif',
   'img/left4.gif',
   'img/left5.gif',
-  'img/left6.gif',
+  'img/left6.gif'
 ];
 
 function setLeft(left) {
@@ -586,7 +511,7 @@ const secArray = [
   'sound/t7.wav',
   'sound/t8.wav',
   'sound/t9.wav',
-  'sound/t10.wav',
+  'sound/t10.wav'
 ];
 
 function playRandomSec() {
@@ -601,7 +526,7 @@ const minArray = [
   'sound/minute3.wav',
   'sound/minute4.wav',
   'sound/minute5.wav',
-  'sound/minute6.wav',
+  'sound/minute6.wav'
 ];
 
 function playRandomMin() {
