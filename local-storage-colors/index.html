@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>save info</title>
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- adapted from Suzie Han's script for local storage -->
+    <!-- https://koto009.github.io/homepage/Final/journal.html -->
+</head>
+
+<body>
+    <form action="gallery.html">
+        <input type="text" id="entry-input"></input>
+        <input class="btn" type="submit" value="Save" onclick="saveEntry()">
+    </form>
+
+    <!-- the container where our saved entries will go -->
+    <!-- we hide it on this page so we don't break the javascript -->
+    <div id="entries hidden"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
