@@ -15,7 +15,7 @@ html, body {
     width: 100%;
     overflow-x: hidden;
     font-size:17px;
-    line-height: 1.3rem;
+    line-height: 1.4rem;
 }
 
 body {
@@ -24,13 +24,32 @@ body {
     padding:1rem;
     color:#1d1d1d;
 
-    
     font-family: "Nanum Gothic Coding";
-    /* font-family: "M PLUS Rounded 1c"; */
-    /* font-family: "Inconsolata"; */
-    /* font-family: "assistant"; */
-    /* font-family: "Gothic A1"; */
-    /* font-family: "Barlow"; */
+    
+}
+
+body.nanum {
+    font-family: "Nanum Gothic Coding";
+}
+
+body.rounded {
+    font-family: "M PLUS Rounded 1c";
+}
+
+body.inconsolata {
+    font-family: "Inconsolata";
+}
+
+body.assistant {
+    font-family: "assistant";
+}
+
+body.gothic {
+    font-family: "Gothic A1";
+}
+
+body.barlow {
+    font-family: "Barlow";
 }
 
 .words {
@@ -63,7 +82,32 @@ h2 {
     text-align: center;
 }
 
+.debug {
+    position: fixed;
+    bottom:10px;
+    left:10px;
+}
 
+.debug-menu {
+    display: none;
+}
 
+.debug-menu.active {
+    display: block;
+}
 
+button {
+    border:none;
+    background:#c6c6c6;
+    padding:.3rem;
+    height:1.3rem;
+}
 
+button:hover {
+    background:#1d1d1d;
+    color:#D9D9D9;
+}
+
+.debug-btn {
+    margin-top:.5rem;
+}

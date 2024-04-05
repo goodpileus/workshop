@@ -27,11 +27,46 @@ $(document).ready(function () {
 	});
 
 	$("img, h2 .word").each(function () {
-		var randomtop = Math.floor(Math.random() * ( 15)),
-				randomleft = Math.floor(Math.random() * ( 15))
+		var randomtop = Math.floor(Math.random() * ( 8)),
+				randomleft = Math.floor(Math.random() * ( 8))
 		$(this).css({
 				"top": randomtop,
 				"left": randomleft
 		});
 });
+});
+
+$(".debug-btn").click(function(){
+	$('.debug-menu').toggleClass("active");
+});
+
+$('input[type=radio][name=typeface]').on('change', function(){
+	
+	$('body').removeClass("nanum");
+	$('body').removeClass("rounded");
+	$('body').removeClass("inconsolata");
+	$('body').removeClass("assistant");
+	$('body').removeClass("gothic");
+	$('body').removeClass("barlow");
+
+	switch($(this).val()){
+			case 'nanum' :
+					$('body').addClass("nanum");
+					break;
+			case 'rounded' :
+					$('body').addClass("rounded");
+					break;
+			case 'inconsolata' :
+					$('body').addClass("inconsolata");
+					break;
+			case 'assistant' :
+					$('body').addClass("assistant");
+					break;
+			case 'gothic' :
+					$('body').addClass("gothic");
+					break;
+			case 'barlow' :
+					$('body').addClass("barlow");
+					break;
+	}            
 });
