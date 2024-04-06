@@ -119,7 +119,7 @@ main {
     /* text-align: justify; */
 }
 
-.word {
+.word, .dr {
     cursor:grab;
 }
 
