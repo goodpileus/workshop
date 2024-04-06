@@ -89,11 +89,13 @@ h2 {
 
 .gallery {
     display: flex;
+    flex-wrap: wrap;
     width:100%;
-    gap:1rem;
+    gap:5vw;
     justify-content: center;
     align-items: flex-start;
-    text-align: center;
+    /* text-align: center; */
+    margin:3rem 0 5rem 0;
 }
 
 .debug {
