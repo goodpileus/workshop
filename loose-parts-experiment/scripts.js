@@ -10,36 +10,35 @@ for (var i = 0; i < words.length; i++) {
 
 $(".dr").draggable({
 	stack: '.dr',
-	containment: "body"
+	containment: "body",
+	start: function( event, ui ) {
+		$(this).addClass('being-dragged'); 
+    $(".reset-btn").fadeIn("slow");
+	},
+	stop: function( event, ui ) {
+		$(this).removeClass('being-dragged');
+		
+		if ($(this).hasClass("scrap")) {
+			moveDiv(this);
+		}
+		
+	},
 });
 
 $("img").click(function(){
 	$(this).toggleClass("large");
 });
 
-$(document).ready(function () {
-	$(".word").each(function () {
-			var randomtop = Math.floor(Math.random() * (- 3)),
-					randomleft = Math.floor(Math.random() * (- 3))
-			$(this).css({
-					"top": randomtop,
-					"left": randomleft
-			});
-	});
-
-	$("img, .scatter").each(function () {
-		var randomtop = Math.floor(Math.random() * ( 12)),
-				randomleft = Math.floor(Math.random() * ( 12))
-		$(this).css({
-				"bottom": randomtop,
-				"left": randomleft
-		});
-});
-});
 
 $(".debug-btn").click(function(){
 	$('.debug-menu').toggleClass("active");
 });
+
+$(".reset-btn").click(function(){
+	location.reload();
+});
+
+
 
 $('input[type=radio][name=typeface]').on('change', function(){
 	
@@ -79,3 +78,57 @@ $('input[type=radio][name=typeface]').on('change', function(){
 					break;
 	}            
 });
+
+
+$(document).ready(function () {
+	$(".word").each(function () {
+			var randomtop = Math.floor(Math.random() * (- 3)),
+					randomleft = Math.floor(Math.random() * (- 3))
+			$(this).css({
+					"top": randomtop,
+					"left": randomleft
+			});
+	});
+
+	$("img, .scatter").each(function () {
+		var randomtop = Math.floor(Math.random() * ( 12)),
+				randomleft = Math.floor(Math.random() * ( 12))
+		$(this).css({
+				"bottom": randomtop,
+				"left": randomleft
+		});
+	});	
+});
+
+
+
+function moveDiv(myclass) {
+
+	var maxLeft = $(window).width() - $(myclass).width();
+	var maxTop = $(window).height() - $(myclass).height();
+	var leftPos = Math.floor(Math.random() * (maxLeft + 1));
+	var topPos = Math.floor(Math.random() * (maxTop + 1));
+
+	$(myclass).css({ top: topPos, left: leftPos });
+	
+};
+
+moveDiv('.a');
+moveDiv('.b');
+moveDiv('.c');
+moveDiv('.d');
+moveDiv('.e');
+
+moveDiv('.a');
+moveDiv('.b');
+moveDiv('.c');
+moveDiv('.d');
+moveDiv('.e');
+
+setInterval(function () {
+	moveDiv('.a');
+	moveDiv('.b');
+	moveDiv('.c');
+	moveDiv('.d');
+	moveDiv('.e');
+}, 40000);
