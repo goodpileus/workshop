@@ -9,7 +9,8 @@ for (var i = 0; i < words.length; i++) {
 }
 
 $(".dr").draggable({
-	stack: '.dr'
+	stack: '.dr',
+	containment: "body"
 });
 
 $("img").click(function(){
