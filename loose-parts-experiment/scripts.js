@@ -26,9 +26,9 @@ $(document).ready(function () {
 			});
 	});
 
-	$("img, h2 .word").each(function () {
-		var randomtop = Math.floor(Math.random() * ( 8)),
-				randomleft = Math.floor(Math.random() * ( 8))
+	$("img").each(function () {
+		var randomtop = Math.floor(Math.random() * ( 12)),
+				randomleft = Math.floor(Math.random() * ( 12))
 		$(this).css({
 				"top": randomtop,
 				"left": randomleft
@@ -48,6 +48,8 @@ $('input[type=radio][name=typeface]').on('change', function(){
 	$('body').removeClass("assistant");
 	$('body').removeClass("gothic");
 	$('body').removeClass("barlow");
+	$('body').removeClass("questrial");
+	$('body').removeClass("montserrat");
 
 	switch($(this).val()){
 			case 'nanum' :
@@ -67,6 +69,12 @@ $('input[type=radio][name=typeface]').on('change', function(){
 					break;
 			case 'barlow' :
 					$('body').addClass("barlow");
+					break;
+			case 'questrial' :
+					$('body').addClass("questrial");
+					break;
+			case 'montserrat' :
+					$('body').addClass("montserrat");
 					break;
 	}            
 });

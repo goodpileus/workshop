@@ -23,6 +23,7 @@ body {
     margin:0;
     padding:1rem;
     color:#1d1d1d;
+    word-spacing: 1px;
 
     font-family: "Nanum Gothic Coding";
     
@@ -52,6 +53,17 @@ body.barlow {
     font-family: "Barlow";
 }
 
+body.questrial {
+    /* font-size:16px; */
+    letter-spacing: .2px;
+    font-family: "Questrial";
+}
+
+body.montserrat {
+    font-size:15px;
+    font-family: "Montserrat";
+}
+
 .words {
     /* background:red; */
     margin:1rem auto;
@@ -71,6 +83,8 @@ h2 {
     text-align: center;
     margin-top:3rem !important;
     font-weight: 500;
+    word-spacing: 1px;
+    font-size: 1.3em;
 }
 
 .gallery {
