@@ -131,6 +131,7 @@ main {
 
 .word, .dr {
     cursor:grab;
+    white-space: nowrap;
 }
 
 h2 {
