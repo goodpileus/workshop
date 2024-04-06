@@ -3,8 +3,11 @@
 }
 
 img {
-  max-width:200px;
   width:100%; 
+}
+
+img.dr {
+    max-width:200px;
 }
 
 img.large {
@@ -21,45 +24,90 @@ html, body {
 body {
     background-color:#D9D9D9;
     margin:0;
-    padding:1rem;
+    margin-bottom:5rem;
+    padding:0;
     color:#1d1d1d;
     word-spacing: 1px;
 
-    font-family: "Nanum Gothic Coding";
-    
-}
-
-body.nanum {
-    font-family: "Nanum Gothic Coding";
-}
-
-body.rounded {
     font-family: "M PLUS Rounded 1c";
 }
 
-body.inconsolata {
+button {
+    border:none;
+    background:#c6c6c6;
+    padding:.3rem;
+    /* height:1.3rem; */
+    font-family: inherit;
+    font-size: 14px;
+}
+
+button:hover {
+    background:#1d1d1d;
+    color:#D9D9D9;
+}
+
+header {
+    position:relative;
+    /* height:100vh; */
+    height:calc(100vh + 40px);
+    background-image: url("opening.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.fade {
+    position: absolute;
+    background:linear-gradient(
+        rgba(217, 217, 217, 0),
+        #d9d9d9);
+
+    background: linear-gradient(180deg, 
+    rgba(217, 217, 217, 0) 0%, 
+    rgba(217, 217, 217, 1) 50%, 
+    rgba(217, 217, 217, 1) 100%);
+    bottom:0;
+    left:0;
+    width:100%;
+    height:60px;
+    /* filter: blur(20px); */
+}
+
+main {
+    padding:1rem;
+
+}
+
+.nanum {
+    font-family: "Nanum Gothic Coding";
+}
+
+.rounded {
+    font-family: "M PLUS Rounded 1c";
+}
+
+.inconsolata {
     font-family: "Inconsolata";
 }
 
-body.assistant {
+.assistant {
     font-family: "assistant";
 }
 
-body.gothic {
+.gothic {
     font-family: "Gothic A1";
 }
 
-body.barlow {
+.barlow {
     font-family: "Barlow";
 }
 
-body.questrial {
+.questrial {
     /* font-size:16px; */
     letter-spacing: .2px;
     font-family: "Questrial";
 }
 
-body.montserrat {
+.montserrat {
     font-size:15px;
     font-family: "Montserrat";
 }
@@ -98,32 +146,61 @@ h2 {
     margin:3rem 0 5rem 0;
 }
 
-.debug {
+footer {
+    /* background:red; */
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: center;
+    gap:20%;
+
     position: fixed;
-    bottom:10px;
-    left:10px;
+    bottom:0;
+    width:100%;
+    padding:2rem;
+    z-index: 999;
+}
+
+.scatter {
+    position: relative;
+}
+
+.debug {
+    position: absolute;
+    /* bottom:10px; */
+    /* left:10px; */
+    /* left:2rem; */
+    margin-left:2rem;
+    margin-bottom:2rem;
+}
+
+.debug.scatter {
+    position: absolute;
 }
 
 .debug-menu {
+    position: absolute;
+    bottom:2rem;
     display: none;
+    background:#D9D9D9;
+    padding:.5rem;
+    width:260px;
 }
 
 .debug-menu.active {
     display: block;
 }
 
-button {
-    border:none;
-    background:#c6c6c6;
-    padding:.3rem;
-    height:1.3rem;
-}
-
-button:hover {
-    background:#1d1d1d;
-    color:#D9D9D9;
-}
-
 .debug-btn {
-    margin-top:.5rem;
+    /* margin-top:.5rem; */
+    background: transparent;
+    opacity:.2;
+}
+
+small {
+    display: inline-block;
+    margin-bottom:.3rem;
+}
+
+input[type="radio"] {
+    margin:0;
 }

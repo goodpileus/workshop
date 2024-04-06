@@ -5,11 +5,11 @@
 var words = document.getElementsByClassName("words");
 for (var i = 0; i < words.length; i++) {
 	var word = words[i];
-	word.innerHTML = word.innerHTML.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g, '$1<span class="word">$2</span>');
+	word.innerHTML = word.innerHTML.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g, '$1<span class="word dr">$2</span>');
 }
 
-$(".word").draggable({
-	stack: '.word'
+$(".dr").draggable({
+	stack: '.dr'
 });
 
 $("img").click(function(){
@@ -18,19 +18,19 @@ $("img").click(function(){
 
 $(document).ready(function () {
 	$(".word").each(function () {
-			var randomtop = Math.floor(Math.random() * (- 2)),
-					randomleft = Math.floor(Math.random() * (- 2))
+			var randomtop = Math.floor(Math.random() * (- 3)),
+					randomleft = Math.floor(Math.random() * (- 3))
 			$(this).css({
 					"top": randomtop,
 					"left": randomleft
 			});
 	});
 
-	$("img").each(function () {
+	$("img, .scatter").each(function () {
 		var randomtop = Math.floor(Math.random() * ( 12)),
 				randomleft = Math.floor(Math.random() * ( 12))
 		$(this).css({
-				"top": randomtop,
+				"bottom": randomtop,
 				"left": randomleft
 		});
 });
