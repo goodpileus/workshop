@@ -236,19 +236,49 @@ input[type="radio"] {
 
 .scrap {
     position: absolute;
-    background:#f4e4e7;
+    background:#cea678;
     height:60px;
     width:60px;
-    transition: 40s ease;
+    transition: 50s ease;
     border-radius:100%;
-    filter:blur(10px);
+    filter:blur(13px);
     /* z-index: 999; */
     mix-blend-mode: color-dodge;
     border:10px solid rgb(175, 175, 175);
+    animation: wander 10s infinite alternate ease-in-out;
+}
+
+.a {
+    animation-delay: -20s;
+}
+
+.b {
+    animation-delay: -14s;
+}
+
+.c {
+    animation-delay: -8s;
+}
+
+.d{
+    animation-delay: -1s;
+}
+
+.e {
+    animation-delay: 7s;
 }
 
 .scrap.being-dragged {
     transition:none;
+}
+
+@keyframes wander {
+    0% {
+        transform:scale(.8);
+    }
+    100% {
+        transform:scale(1.6);
+    }
 }
 
 .boundaries {

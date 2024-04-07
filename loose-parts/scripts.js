@@ -110,25 +110,60 @@ function moveDiv(myclass) {
 	var topPos = Math.floor(Math.random() * (maxTop + 1));
 
 	$(myclass).css({ top: topPos, left: leftPos });
+
+	console.log(myclass);
 	
 };
 
+// first move
 moveDiv('.a');
 moveDiv('.b');
 moveDiv('.c');
 moveDiv('.d');
 moveDiv('.e');
 
+// second move
 moveDiv('.a');
 moveDiv('.b');
 moveDiv('.c');
 moveDiv('.d');
 moveDiv('.e');
 
-setInterval(function () {
-	moveDiv('.a');
-	moveDiv('.b');
-	moveDiv('.c');
-	moveDiv('.d');
-	moveDiv('.e');
-}, 40000);
+// third staggered moves
+setTimeout(function() {
+	offset('.a');
+}, 1000);
+
+setTimeout(function() {
+	offset('.b');
+}, 6000);
+
+setTimeout(function() {
+	offset('.c');
+}, 14000);
+
+setTimeout(function() {
+	offset('.d');
+}, 26000);
+
+setTimeout(function() {
+	offset('.e');
+}, 37000);
+
+function offset(myclass) {
+	setInterval(function () {
+		moveDiv(myclass);
+	}, 40000);
+}
+
+// setInterval(function () {
+// 	moveDiv('.a');
+// 	moveDiv('.b');
+// 	moveDiv('.c');
+// 	moveDiv('.d');
+// 	moveDiv('.e');
+// }, 40000);
+
+// $( ".scrap" ).each(function() {
+
+// });
