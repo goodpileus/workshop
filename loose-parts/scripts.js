@@ -167,3 +167,11 @@ function offset(myclass) {
 // $( ".scrap" ).each(function() {
 
 // });
+
+// --- smooth scroll on clicking nav items
+$('a').click(function(){
+	$('html, body').animate({
+			scrollTop: $( $(this).attr('href') ).offset().top
+	}, 350);
+	return false;
+});
