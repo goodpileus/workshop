@@ -25,7 +25,7 @@ $(".dr").draggable({
 	},
 });
 
-$("img").click(function(){
+$(".gallery img").click(function(){
 	$(this).toggleClass("large");
 });
 
@@ -100,8 +100,6 @@ $(document).ready(function () {
 	});	
 });
 
-
-
 function moveDiv(myclass) {
 
 	var maxLeft = $(window).width() - $(myclass).width();
@@ -115,6 +113,16 @@ function moveDiv(myclass) {
 	
 };
 
+$(".scrap").each( function() {
+  // var rNum = Math.round((Math.random() * 360) + 1);  
+	var rNum = parseInt(Math.random()*359,0)>180?"+"+(Math.random()*359):"-"+(Math.random()*359);
+	console.log(rNum);
+  $(this).css( {   
+    '-webkit-transform': 'rotate('+ rNum + 'deg)',
+    '-moz-transform': 'rotate('+ rNum + 'deg)'  
+  } );  
+} );
+
 // first move
 moveDiv('.a');
 moveDiv('.b');
@@ -122,12 +130,20 @@ moveDiv('.c');
 moveDiv('.d');
 moveDiv('.e');
 
+moveDiv('.f');
+moveDiv('.g');
+moveDiv('.h');
+
 // second move
 moveDiv('.a');
 moveDiv('.b');
 moveDiv('.c');
 moveDiv('.d');
 moveDiv('.e');
+
+moveDiv('.f');
+moveDiv('.g');
+moveDiv('.h');
 
 // third staggered moves
 setTimeout(function() {
@@ -150,23 +166,24 @@ setTimeout(function() {
 	offset('.e');
 }, 37000);
 
+setTimeout(function() {
+	offset('.f');
+}, 2000);
+
+setTimeout(function() {
+	offset('.g');
+}, 10000);
+
+setTimeout(function() {
+	offset('.h');
+}, 18000);
+
 function offset(myclass) {
 	setInterval(function () {
 		moveDiv(myclass);
 	}, 40000);
 }
 
-// setInterval(function () {
-// 	moveDiv('.a');
-// 	moveDiv('.b');
-// 	moveDiv('.c');
-// 	moveDiv('.d');
-// 	moveDiv('.e');
-// }, 40000);
-
-// $( ".scrap" ).each(function() {
-
-// });
 
 // --- smooth scroll on clicking nav items
 $('a').click(function(){

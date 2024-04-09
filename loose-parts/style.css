@@ -7,7 +7,7 @@
 }
 
 img {
-  width:100%; 
+    max-width:100%; 
 }
 
 img.dr {
@@ -234,8 +234,27 @@ input[type="radio"] {
     opacity:1;
 }
 
-
 .scrap {
+    /* mix-blend-mode: overlay; */
+    opacity: .9;
+    
+    transition: 160s;
+    width:200px;
+    max-height:400px;
+    /* z-index: 9; */
+}
+
+.scrap img {
+    max-height: 100%;
+}
+
+.scrap.being-dragged {
+    transition:left 0s, top 0s, transform 160s;
+
+}
+
+
+.light {
     position: absolute;
     background:#cea678;
     height:60px;
@@ -247,6 +266,10 @@ input[type="radio"] {
     mix-blend-mode: color-dodge;
     border:10px solid rgb(175, 175, 175);
     animation: wander 10s infinite alternate ease-in-out;
+}
+
+.light.being-dragged {
+    transition:none;
 }
 
 .a {
@@ -267,10 +290,6 @@ input[type="radio"] {
 
 .e {
     animation-delay: 7s;
-}
-
-.scrap.being-dragged {
-    transition:none;
 }
 
 @keyframes wander {
