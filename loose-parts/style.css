@@ -273,42 +273,49 @@ input[type="radio"] {
 
 }
 
-
 .light {
     position: absolute;
-    background:#cea678;
-    height:60px;
-    width:60px;
-    transition: 50s ease;
-    border-radius:100%;
     filter:blur(13px);
     /* z-index: 999; */
+    transition: 50s ease;
     mix-blend-mode: color-dodge;
-    border:10px solid rgb(175, 175, 175);
-    animation: wander 10s infinite alternate ease-in-out;
+    z-index: 9;
 }
 
 .light.being-dragged {
     transition:none;
 }
 
-.a {
+.glimmer {
+    position:absolute;
+    top:0;
+    left:0;
+    background:#cea678;
+    height:100px;
+    width:100px;
+    border-radius:100%;
+    border:10px solid rgb(16, 14, 16);
+    animation: wander 10s infinite alternate ease-in-out;
+    opacity:.9;
+}
+
+.a .glimmer {
     animation-delay: -20s;
 }
 
-.b {
+.b .glimmer {
     animation-delay: -14s;
 }
 
-.c {
+.c .glimmer {
     animation-delay: -8s;
 }
 
-.d{
+.d .glimmer {
     animation-delay: -1s;
 }
 
-.e {
+.e .glimmer {
     animation-delay: 7s;
 }
 

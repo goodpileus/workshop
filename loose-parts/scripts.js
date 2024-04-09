@@ -13,7 +13,7 @@ $(".dr").draggable({
 	containment: "body",
 	start: function( event, ui ) {
 		$(this).addClass('being-dragged'); 
-    $(".reset-btn").fadeIn("slow");
+    $(".reset-btn").fadeIn();
 	},
 	stop: function( event, ui ) {
 		$(this).removeClass('being-dragged');
