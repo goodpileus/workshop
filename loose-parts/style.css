@@ -80,6 +80,7 @@ header {
     background-image: url("header-color6.jpg");
     background-size: cover;
     background-position: bottom;
+    /* z-index: -2; */
 }
 
 .fade {
@@ -98,6 +99,7 @@ header {
     height:60px;
     /* filter: blur(20px); */
     pointer-events: none;
+    /* z-index: -1; */
 }
 
 main {
@@ -138,6 +140,15 @@ main {
 .montserrat {
     font-size:15px;
     font-family: "Montserrat";
+}
+
+.scribbles {
+    font-family: "Redacted Script";
+}
+
+.yarndings {
+    font-size:18px;
+    font-family: "Yarndings 20";
 }
 
 .words {
@@ -247,10 +258,10 @@ input[type="radio"] {
     /* mix-blend-mode: overlay; */
     opacity: .9;
     
-    transition: 160s;
+    transition: left 160s, top 160s, transform 160s;
     width:200px;
     max-height:400px;
-    /* z-index: 9; */
+    z-index: 9;
 }
 
 .scrap img {

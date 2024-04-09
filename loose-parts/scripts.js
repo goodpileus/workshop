@@ -50,6 +50,10 @@ $('input[type=radio][name=typeface]').on('change', function(){
 	$('body').removeClass("barlow");
 	$('body').removeClass("questrial");
 	$('body').removeClass("montserrat");
+	$('body').removeClass("music");
+	$('body').removeClass("symbols");
+	$('body').removeClass("scribbles");
+	$('body').removeClass("yarndings");
 
 	switch($(this).val()){
 			case 'nanum' :
@@ -75,6 +79,12 @@ $('input[type=radio][name=typeface]').on('change', function(){
 					break;
 			case 'montserrat' :
 					$('body').addClass("montserrat");
+					break;
+			case 'scribbles' :
+					$('body').addClass("scribbles");
+					break;
+			case 'yarndings' :
+					$('body').addClass("yarndings");
 					break;
 	}            
 });
