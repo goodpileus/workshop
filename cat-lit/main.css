@@ -35,13 +35,20 @@ p {
 }
 
 figure {
-  margin:0;
+  margin:1rem 0;
 }
 
 figcaption {
   font-size: .9rem;
   margin-top:.5rem;
   /* font-family: monospace; */
+}
+
+blockquote {
+  font-style: italic;
+  margin: 1rem 2rem;
+  opacity:0.7;
+  max-width:500px;
 }
 
 img {
@@ -168,4 +175,35 @@ summary.grid {
   margin-top:1rem;
   background: var(--bg);
   border-bottom:1px dotted;
+}
+
+@media screen and (max-width: 1120px) {
+  body {
+    padding:1rem;
+  }
+
+  .window {
+    position: static;
+    margin:2rem auto 0 auto;
+    margin-top:2rem;
+  }
+
+  main {
+    margin:0 auto;
+  }
+
+  .inner {
+    padding:0 1rem 1rem 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding:.5rem;
+    font-size:95%;
+  }
+
+  .inner {
+    padding:0 .5rem .5rem .5rem;
+  }
 }
