@@ -121,7 +121,7 @@ summary.grid {
 }
 
 .grid span {
-  padding:.5rem;
+  padding:.7rem;
 }
 
 .header {
@@ -131,7 +131,7 @@ summary.grid {
   padding-bottom:.5rem;
   background: var(--bg);
   /* height:1rem; */
-  margin-top:90px;
+  margin-top:35px;
   z-index: 99;
   border-top:none;
   border-bottom:none;
