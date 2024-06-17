@@ -49,10 +49,12 @@ img {
   max-height: 600px;
 }
 
-h2 {
+h1 {
   font-weight: normal;
   margin-top:2rem;
   letter-spacing: 4px;
+  font-family: serif;
+  font-size: 180%;
 }
 
 a {
