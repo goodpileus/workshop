@@ -198,7 +198,7 @@ summary.grid {
 
 @media screen and (max-width: 600px) {
   body {
-    padding:.5rem;
+    /* padding:.5rem; */
     font-size:95%;
   }
 
@@ -216,5 +216,24 @@ summary.grid {
 
   .inner {
     padding:0 .5rem .5rem .5rem;
+  }
+
+  .drop {
+    width:5%;
+  }
+  
+  .title {
+    width:60%;
+    margin-right:.7rem;
+    /* border-right:1px dotted; */
+  }
+  
+  .author {
+    width: 40%;
+    /* border-right:1px dotted; */
+  }
+
+  .year {
+    display:none;
   }
 }
