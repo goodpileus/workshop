@@ -115,7 +115,6 @@ details[open] summary .drop::before {
   display: flex;
   /* position:sticky; */
   /* top:60px; */
-  /* border-top:1px dotted; */
   border-top:1px dotted;
 }
 
