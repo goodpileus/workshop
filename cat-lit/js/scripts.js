@@ -24,7 +24,7 @@ function newBg() {
 
 }
 
-var interval = setInterval(timer, 5000);
+var interval = setInterval(timer, 10000);
 
 function timer() {
   newBg();
