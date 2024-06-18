@@ -162,13 +162,13 @@ summary.grid {
 }
 
 .title {
-  width:65%;
+  width:60%;
   margin-right:.7rem;
   /* border-right:1px dotted; */
 }
 
 .author {
-  width: 30%;
+  width: 35%;
   /* border-right:1px dotted; */
 }
 
