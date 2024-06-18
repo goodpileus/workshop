@@ -170,7 +170,7 @@ summary.grid {
 .inner {
   padding-left:calc(5% + .7rem);
   padding-right:15%;
-  margin-bottom:1rem;
+  /* margin-bottom:1rem; */
   margin-top:1rem;
   background: var(--bg);
   border-bottom:1px dotted;
