@@ -30,8 +30,6 @@ function timer() {
   newBg();
 }
 
-
-
 $.fn.checkStuck = function (className) {
   $(this).each(function() {
       var t = $(this); //preselect
@@ -40,3 +38,7 @@ $.fn.checkStuck = function (className) {
 }
 
 $(document).on('scroll', function() { $('.grid').checkStuck('stuck'); });
+
+$( document ).ready(function() {
+  $('.window').css('opacity', '1');
+});

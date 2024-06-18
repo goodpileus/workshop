@@ -80,7 +80,8 @@ a:hover {
   top:50px;
   width:190px;
   display: flex;
-  transition: background 10s;
+  transition: background 10s, opacity 1s;
+  opacity:0;
 }
 
 main {
