@@ -29,3 +29,14 @@ var interval = setInterval(timer, 10000);
 function timer() {
   newBg();
 }
+
+
+
+$.fn.checkStuck = function (className) {
+  $(this).each(function() {
+      var t = $(this); //preselect
+      t.toggleClass(className, (parseInt(t.css('top'), 10) === t[0].getBoundingClientRect().top));
+  });
+}
+
+$(document).on('scroll', function() { $('.grid').checkStuck('stuck'); });

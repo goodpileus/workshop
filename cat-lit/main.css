@@ -116,7 +116,7 @@ details[open] summary .drop::before {
   /* position:sticky; */
   /* top:60px; */
   /* border-top:1px dotted; */
-  border-bottom:1px dotted;
+  border-top:1px dotted;
 }
 
 summary.grid {
@@ -124,7 +124,7 @@ summary.grid {
   top:60px;
 }
 
-.grid:first-of-type {
+.grid.first {
   border-top:none;
 }
 
@@ -132,9 +132,14 @@ summary.grid {
   padding:.7rem;
 }
 
+.grid.stuck {
+  border-bottom:1px dotted;
+  border-top:none;
+}
+
 .header {
   position:sticky;
-  top:0;
+  top:-1px;
   padding-top:1rem;
   padding-bottom:.5rem;
   background: var(--bg);
@@ -148,23 +153,27 @@ summary.grid {
   font-size:90%;
 }
 
+.header.stuck {
+  /* border-bottom:none; */
+}
+
 .drop {
   width:5%;
 }
 
 .title {
-  width:40%;
+  width:65%;
   margin-right:.7rem;
   /* border-right:1px dotted; */
 }
 
 .author {
-  width: 40%;
+  width: 30%;
   /* border-right:1px dotted; */
 }
 
 .year {
-  width: 15%;
+  width: 10%;
 }
 
 .inner {
@@ -173,7 +182,7 @@ summary.grid {
   /* margin-bottom:1rem; */
   margin-top:1rem;
   background: var(--bg);
-  border-bottom:1px dotted;
+  /* border-bottom:1px dotted; */
 }
 
 @media screen and (max-width: 1120px) {
