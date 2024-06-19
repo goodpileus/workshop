@@ -18,7 +18,7 @@ function newBg() {
     'color' : randomColor,
   });
 
-  $('.window').css({
+  $('.illuminated').css({
     'background' : randomColor,
   });
 
