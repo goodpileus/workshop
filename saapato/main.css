@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color: #ffffff;
+}
+
+::selection,
+::-moz-selection {
+  background: #ffffff;
+}
+
+body {
+    margin:1rem;
+    background-image: url(paper/6.gif);
+    background-size: 20vw;
+    font-size: 1.1rem;
+    color:#8f8c82;
+}
+
+a {
+  color: #8f8c82;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  /* background: #fffff0; */
+  padding:1rem;
+  width:200px;
+  margin:0;
+}

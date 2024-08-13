@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color: #ffffff;
+}
+
+::selection,
+::-moz-selection {
+  background: #ffffff;
+}
+
+body {
+    margin:0;
+}
+
+img {
+  max-width: 100%;
+}
