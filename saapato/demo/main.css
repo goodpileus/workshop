@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color: #ffffff;
+}
+
+::selection,
+::-moz-selection {
+  background: #ffffff;
+}
+
+body {
+    margin:0;
+    background-image: url(paper/6.gif);
+    background-size: 20vw;
+    font-size: 1.1rem;
+    min-height:100vh;
+    color:#8f8c82;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+  color: #8f8c82;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  /* background: #fffff0; */
+  padding:1rem;
+  width:200px;
+  margin:0;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width:1000px;
+}
+
+.tile {
+  width: 50px;
+  height:50px;
+  border:1px solid;
+  mix-blend-mode:multiply;
+}
+
+.water {
+  background:lightblue;
+}
+
+.sand {
+  background:rgb(204, 183, 137);
+}
