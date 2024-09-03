@@ -6,7 +6,7 @@ function buildWorld() {
   var grid = $('.grid');
 
   var water = "<div class='tile water'></div>";
-  var waterValue = +200;
+  var waterValue = +300;
   var waterNr = 0;
 
   while (waterNr < waterValue) {
@@ -15,12 +15,21 @@ function buildWorld() {
   }
 
   var sand = "<div class='tile sand'></div>";
-  var sandValue = +100;
+  var sandValue = +50;
   var sandNr = 0;
 
   while (sandNr < sandValue) {
     $('.grid').append(sand);
     sandNr++;
+  }
+
+  var mystic = "<div class='tile mystic'></div>";
+  var mysticValue = +50;
+  var mysticNr = 0;
+
+  while (mysticNr < mysticValue) {
+    $('.grid').append(mystic);
+    mysticNr++;
   }
 
   $('.grid').addClass('random');
