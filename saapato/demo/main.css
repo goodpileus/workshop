@@ -75,3 +75,10 @@ ul {
     height:10vw;
   }
 }
+
+@media screen and (max-width:600px) {
+  .tile {
+    width:12.5vw;
+    height:12.5vw;
+  }
+}
