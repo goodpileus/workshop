@@ -1,8 +1,6 @@
+genesis();
 
-
-buildWorld();
-
-function buildWorld() {
+function genesis() {
   var grid = $('.grid');
 
   var water = "<div class='tile water'></div>";
