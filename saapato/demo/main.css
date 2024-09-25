@@ -13,6 +13,7 @@
 
 body {
   margin:0;
+  background-color:#b9d6d3;
   background-image: url(paper/6.gif);
   background-size: 20vw;
   font-size: 1.1rem;
@@ -39,7 +40,7 @@ ul {
   margin:0;
 }
 
-.grid {
+.world {
   display: flex;
   flex-wrap: wrap;
   /* width:1000px; */
@@ -48,10 +49,12 @@ ul {
 .tile {
   width: 5vw;
   height:5vw;
-  border-bottom:1px solid;
-  border-left:1px solid;
+  /* border-bottom:1px solid; */
+  /* border-left:1px solid; */
   mix-blend-mode:multiply;
+  opacity: .8;
   /* transition:background .2s; */
+  background-size: 100% !important;
 }
 
 .tile:hover {
@@ -64,14 +67,18 @@ ul {
 
 .water {
   background:#b9d6e0;
+  background-image: url('img/water-1.png');
 }
 
 .sand {
   background:#d4c7ac;
+  background-image: url('img/ground-1.gif');
+  /* filter: hue-rotate(260deg); */
 }
 
 .mystic {
   background: #dbc4da;
+  background-image: url('img/mystic-1.png');
 }
 
 @media screen and (max-width:1000px) {

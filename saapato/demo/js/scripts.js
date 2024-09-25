@@ -1,36 +1,36 @@
 genesis();
 
 function genesis() {
-  var grid = $('.grid');
+  var world = $('.world');
 
   var water = "<div class='tile water'></div>";
   var waterValue = +300;
   var waterNr = 0;
 
   while (waterNr < waterValue) {
-    $('.grid').append(water);
+    world.append(water);
     waterNr++;
   }
 
   var sand = "<div class='tile sand'></div>";
-  var sandValue = +50;
+  var sandValue = +170;
   var sandNr = 0;
 
   while (sandNr < sandValue) {
-    $('.grid').append(sand);
+    world.append(sand);
     sandNr++;
   }
 
   var mystic = "<div class='tile mystic'></div>";
-  var mysticValue = +50;
+  var mysticValue = +10;
   var mysticNr = 0;
 
   while (mysticNr < mysticValue) {
-    $('.grid').append(mystic);
+    world.append(mystic);
     mysticNr++;
   }
 
-  $('.grid').addClass('random');
+  world.addClass('random');
 
 }
 
