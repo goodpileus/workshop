@@ -51,7 +51,7 @@
 body {
     margin:0;
     padding:20px;
-    font-size: .85rem;
+    font-size: .8rem;
     color:#896848;
     background: #ECE0C9;
     /* font-family: 'Luxi Mono', sans-serif; */
@@ -64,13 +64,15 @@ main {
 }
 
 h1 {
+  /* font-size: 110%; */
   font-size: inherit;
   font-weight: normal;
   margin:20px 0;
+  letter-spacing: 1.5px;
 }
 
 p {
-  max-width: 500px;
+  max-width: 430px;
   padding-left:20px;
   margin:20px 0;
 }
@@ -94,6 +96,7 @@ img {
   flex-wrap: wrap;
   width:60px;
   margin-bottom:20px;
+  /* margin-left:20px; */
 }
 
 .drab-slab span {
