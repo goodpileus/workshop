@@ -67,14 +67,19 @@ h1 {
   /* font-size: 110%; */
   font-size: inherit;
   font-weight: normal;
-  margin:20px 0;
+  font-weight: bolder;
+  margin: 0;
   letter-spacing: 1.5px;
 }
 
 p {
   max-width: 430px;
+  margin:0;
+  /* margin-bottom: 20px; */
+}
+
+.ind-1 {
   padding-left:20px;
-  margin:20px 0;
 }
 
 a {
@@ -118,7 +123,7 @@ img {
   }
 
   p {
-    padding:0 20px;
+    /* padding:0 20px;  */
   }
 }
 
