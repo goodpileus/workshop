@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color: #ffffff;
+}
+
+::selection,
+::-moz-selection {
+  background: #ffffff;
+}
+
+@font-face {
+    font-family: 'ArkDes-Hershey';
+    src: url('fonts/Arkdes-Hershey-17.woff2') format('woff2'),
+        url('fonts/Arkdes-Hershey-17.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Meta-old-French';
+    src: url('fonts/Meta-old-French.woff2') format('woff2'),
+        url('fonts/Meta-old-French.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Selectric Roman';
+    src: url('fonts/selectricroman.woff2') format('woff2'),
+        url('fonts/selectricroman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+  font-family: 'Selectric Roman';
+  margin:2rem;
+  text-align: center;
+  background: #748d74;
+  background-image: url(img/grass.gif);
+  background-size: 500px;
+  white-space-collapse: collapse;
+  color: #5a6a44;
+}
+
+a {
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+  width:400px;
+  border:5px solid #c3ea6a;
+  display: inline-block;
+  margin:0 .2rem;
+  margin:0;
+}
+
+img:hover {
+  border-color:yellow;
+}
+
+p {
+  margin:.2rem auto 4rem auto;
+  background-color: #c3ea6a;
+  width: 130px;
+  padding:.5rem .5rem .4rem .5rem;
+}
