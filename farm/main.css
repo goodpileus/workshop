@@ -67,8 +67,14 @@ img:hover {
 }
 
 p {
-  margin:.2rem auto 4rem auto;
+  margin:.2rem auto 0 auto;
   background-color: #c3ea6a;
-  width: 150px;
+  width: 180px;
+  width:auto;
+  display: inline-block;
   padding:.5rem .5rem .4rem .5rem;
+}
+
+div {
+  margin-bottom:4rem
 }
