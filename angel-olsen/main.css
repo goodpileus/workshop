@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  margin:0;
+}
+
+.container {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100svh;
+  overflow: hidden;
+}
+
+.progress-bar {
+  position: fixed;
+  bottom:0;
+  left:0;
+  width:100vw;
+  height:3px;
+  transform:scaleX(0%);
+  transform-origin: center left;
+  background-color: white;
+  will-change: transform;
+  z-index: 2;
+}
+
+.progress-counter {
+  position:fixed;
+  bottom:1rem;
+  right:2rem;
+  color:white;
+  z-index: 2;
+}
+
+.nav-menu {
+  position: fixed;
+  top:1rem;
+  left:0;
+  z-index: 999999;
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.nav-menu button {
+  cursor: pointer;
+  transition: all 0.1s ease;
+  background:white;
+  border:1px solid;
+  padding-top:4px;
+}
+
+.nav-menu button:hover,
+.nav-menu button.active {
+  background-color:black;
+  color:white;
+}
+
+.scroller {
+  position:relative;
+  width:700vw;
+  height:100svh;
+  display: flex;
+  will-change: transform;
+  transform:translateX(0);
+}
+
+section {
+  position:relative;
+  height:100svh;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+
+  font-size: 40px;
+  width:90vw;
+  background:rgb(109, 81, 154);
+  border:1px solid;
+  flex-shrink: 0;
+  /* margin-left:5vw; */
+}
+
+.intermission {
+  width:200vw;
+  z-index: 999999;
+}
+
+.week-title { 
+  position: absolute;
+  pointer-events: none;
+  z-index: 99;
+}
+
+.exaltation {
+  background:pink;
+  width:200px;
+  height:200px;
+  border:1px solid;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.draggable.active {
+  background:red;
+  /* position: fixed; */
+  /* position: absolute;
+  top:0 !important;
+  left:0 !important;
+  width:100vw;
+  height:100vh; */
+}
+
+
+
+/* .scroll-container {
+  width: 100%;
+  height:100vh;
+  background-color: red;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  display: flex;
+  padding:16px;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-track {
+  display: inline-flex;
+}
+
+.item {
+  width: 80vw;
+  height: 100%;
+  margin-right: 16px; 
+  font-size: 40px;
+  background: #222;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+} */
+ 
