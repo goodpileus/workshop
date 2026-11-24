@@ -1,21 +1,64 @@
 let hasDragged = false;
 
-$(".draggable").each(function () {
-  var randomtop = Math.floor(
-      Math.random() * ($(".week").height() - $(this).height() - 20)
-    ),
-    randomleft = Math.floor(
-      Math.random() * ($(".week").width() - $(this).width() - 20)
-    ),
-    randomzindex = Math.floor(Math.random() * 30);
-  $(this).css({
-    top: randomtop,
-    left: randomleft,
-    "z-index": randomzindex,
-  });
+$('.week').each(function() {
+  const classes = ['r1', 'r3', 'r5', 'r7'];
+  const randomClass = classes[Math.floor(Math.random() * classes.length)];
+  $(this).addClass(randomClass);
 });
 
+// $.fn.shuffleChildren = function() {
+//   return this.each(function() {
+//     const $container = $(this);
+//     const items = $container.children().get();
+    
+//     for (let i = items.length - 1; i > 0; i--) {
+//       const j = Math.floor(Math.random() * (i + 1));
+//       [items[i], items[j]] = [items[j], items[i]];
+//     }
+    
+//     $container.append(items);
+//   });
+// };
+
+// Usage:
+// $('.week').shuffleChildren();
+
 $(document).ready(function () {
+
+  $(".draggable").each(function () {
+    let rangeX = 100;
+    let rangeY = 20;
+    // center calc doesn't work for elements that are wider or taller than their container...
+    const centerX = ($(this).parent().width() - $(this).width())/2;
+    const centerY = ($(this).parent().height() - $(this).height())/2;
+    const randomX = centerX - (Math.floor(Math.random() * (rangeX * 2 + 1)) - rangeX);
+    const randomY = centerY - (Math.floor(Math.random() * (rangeY * 2 + 1)) - rangeY);
+    // const randomX = Math.floor(Math.random() * (rangeX * 2 + 1)) - rangeX;
+    // const randomY = Math.floor(Math.random() * (rangeY * 2 + 1)) - rangeY;
+    const randomZ = Math.floor(Math.random() * 30);
+
+    // Apply the CSS transform
+    $(this).css({
+      top: randomY,
+      left: randomX,
+      "z-index": randomZ,
+    });
+    // var randomtop = Math.floor(
+    //     Math.random() * ($(this).parent().height() - ($(this).height() * 2.2))
+    //   ),
+    //   randomleft = Math.floor(
+    //     Math.random() * ($(this).parent().width() - ($(this).width()))
+    //   ),
+    //   randomzindex = Math.floor(Math.random() * 30);
+    // $(this).css({
+    //   top: randomtop,
+    //   left: randomleft,
+    //   "z-index": randomzindex,
+    // });
+
+
+  });
+
   const $container = $('.container');
   const $scroller = $('.scroller');
   const $progressCounter = $('.progress-counter');
@@ -58,10 +101,12 @@ $(document).ready(function () {
       $originalSections.each(function (index) {
         $(this)
           .clone(true)
+          .removeAttr('id') // Remove ID from cloned section
+          .find('[id]').removeAttr('id').end() // Remove IDs from any child elements inside the clone
           .addClass('clone-section')
           .attr('aria-hidden', 'true')
           .attr('data-clone-index', `${i}-${index}`)
-          .insertBefore($originalSections.first());
+          .appendTo($scroller); // (or .insertBefore($originalSections.first()))
       });
     }
 
@@ -70,10 +115,12 @@ $(document).ready(function () {
       $originalSections.each(function (index) {
         $(this)
           .clone(true)
+          .removeAttr('id') // Remove ID from cloned section
+          .find('[id]').removeAttr('id').end() // Remove IDs from any child elements inside the clone
           .addClass('clone-section')
           .attr('aria-hidden', 'true')
           .attr('data-clone-index', `${i}-${index}`)
-          .appendTo($scroller);
+          .appendTo($scroller); // (or .insertBefore($originalSections.first()))
       });
     }
 
@@ -275,7 +322,56 @@ $(document).ready(function () {
     scrollToSection(targetIndex);
   });
 
-  scrollToSection(0);
+  // scrollToSection(0);
+
+
+  const scrollToElementById = (elementId) => {
+    // Accept either '#work' or 'work'
+    const cleanId = elementId.replace(/^#/, '');
+    const $originalSections = $scroller.find('section:not(.clone-section)');
+    const $target = $originalSections.find(`#${cleanId}`).add($originalSections.filter(`#${cleanId}`)).first();
+
+    if (!$target.length) return;
+
+    // 1. Calculate the element's left edge relative to the start of the original sequence
+    const firstOriginalLeft = $originalSections.first().offset().left;
+    const targetLeft = $target.offset().left;
+    const elementOffsetInSequence = targetLeft - firstOriginalLeft;
+
+    // 2. Center the element in the viewport
+    const viewportWidth = $container.innerWidth();
+    const targetWidth = $target.outerWidth(true);
+    const centerAdjustment = (viewportWidth - targetWidth) / 2;
+
+    let targetOffsetInSequence = (elementOffsetInSequence - centerAdjustment) % sequenceWidth;
+    if (targetOffsetInSequence < 0) targetOffsetInSequence += sequenceWidth;
+
+    // 3. Find current normalized position inside the loop
+    const basePosition = sequenceWidth * config.bufferSize;
+    let currentRelative = (currentScrollX - basePosition) % sequenceWidth;
+    if (currentRelative < 0) currentRelative += sequenceWidth;
+
+    // 4. Calculate shortest circular distance
+    let delta = targetOffsetInSequence - currentRelative;
+
+    if (delta > sequenceWidth / 2) {
+      delta -= sequenceWidth;
+    } else if (delta < -sequenceWidth / 2) {
+      delta += sequenceWidth;
+    }
+
+    // 5. Trigger smooth animation
+    targetScrollX = currentScrollX + delta;
+    startAnimation(checkBoundaryAndReset());
+  };
+
+  $('.nav-menu a[href^="#"]').on('click', function (e) {
+    e.preventDefault();
+    const targetId = $(this).attr('href');
+    scrollToElementById(targetId);
+  });
+
+  scrollToElementById('#w1');
 
   $('.draggable').draggable({
     stack: '.draggable',
@@ -295,5 +391,13 @@ $(document).ready(function () {
 $('.draggable').on('mouseup', function () {
   if (!hasDragged) {
     $(this).toggleClass('active');
+    $(this)
+      .children('.enhanced')
+      .clone(true)
+      .appendTo($('.enhanced-target'));
   }
+});
+
+$('.enhanced').on('mouseup', function () {
+    $(this).remove();
 });
