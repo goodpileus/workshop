@@ -21,10 +21,10 @@ a {
   background-image: url(img/angel-moon-clouds.gif);
   background-image: url(img/angel-wave-ocean.gif);
   /* background-image: url(img/angel-wind-trees.gif); */
-  /* background-image: url(img/angel-stars.gif); */
+  background-image: url(img/angel-stars.gif);
   background-size: auto 100vh;
   background-size: auto 33.3333vh;
-  /* background-size: auto 15vh; */
+  background-size: auto 15vh;
 }
 
 .wireframe .scroller, .wireframe .intermission {
@@ -212,8 +212,8 @@ a {
 
 .exaltation {
   /* background:pink; */
-  width:600px;
-  height:600px;
+  width:500px;
+  height:500px;
   /* max-width: 650px; */
   /* width: max-content; */
   /* height:200px; */
